@@ -58,9 +58,10 @@ class ShowActivity : AppCompatActivity(), PdfCardClickListener {
         })
     }
 
-    override fun onPdfCardClicked(downloadUrl: String) {
+    override fun onPdfCardClicked(pdfFile: PdfFile) {
         val intent = Intent(this, PdfActivity::class.java)
-        intent.putExtra("downloadUrl", downloadUrl)
+        intent.putExtra("downloadUrl", pdfFile.downloadUrl)
+        intent.putExtra("fileName", pdfFile.fileName)
         startActivity(intent)
     }
 

@@ -15,7 +15,7 @@ class PdfFilesAdapter(private val listener: PdfCardClickListener) :
 
         init {
             binding.root.setOnClickListener {
-                listener.onPdfCardClicked(getItem(adapterPosition).downloadUrl)
+                listener.onPdfCardClicked(getItem(adapterPosition))
             }
         }
 
@@ -36,7 +36,7 @@ class PdfFilesAdapter(private val listener: PdfCardClickListener) :
 }
 
 interface PdfCardClickListener {
-    fun onPdfCardClicked(downloadUrl: String)
+    fun onPdfCardClicked(pdfFile: PdfFile)
 }
 
 private class DiffCallback : DiffUtil.ItemCallback<PdfFile>() {
