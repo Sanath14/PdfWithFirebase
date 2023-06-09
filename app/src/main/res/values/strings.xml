@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">PdfViewerFirebase</string>
+    <string name="no_file">No PDF File Selected yet !</string>
+</resources>
