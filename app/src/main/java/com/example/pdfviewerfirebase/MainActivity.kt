@@ -41,7 +41,8 @@ class MainActivity : AppCompatActivity() {
     private fun initClickListeners() {
 
         binding.floatingActionButton.setOnClickListener {
-            launcher.launch("application/pdf")
+           launcher.launch("application/pdf")
+           // launcher.launch("image/*")
         }
 
         binding.showAllBtn.setOnClickListener {
