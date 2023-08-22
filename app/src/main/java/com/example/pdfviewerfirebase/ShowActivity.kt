@@ -1,11 +1,10 @@
 package com.example.pdfviewerfirebase
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.pdfviewerfirebase.databinding.ActivityShowBinding
 import com.google.android.material.snackbar.Snackbar
@@ -25,17 +24,22 @@ class ShowActivity : AppCompatActivity(), PdfCardClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        init()
+        getAllPdfs()
+
+    }
+
+    private fun init(){
         binding = ActivityShowBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         databaseRef = FirebaseDatabase.getInstance().getReference("pdfs")
         binding.recyclerView.setHasFixedSize(true)
+
         binding.recyclerView.layoutManager = GridLayoutManager(this, 2)
         adapter = PdfFilesAdapter(this)
         binding.recyclerView.adapter = adapter
-        getAllPdfs()
     }
-
     private fun getAllPdfs() {
         databaseRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {

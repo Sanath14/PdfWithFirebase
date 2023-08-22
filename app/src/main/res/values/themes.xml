@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.PdfViewerFirebase" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-         <item name="android:statusBarColor">@color/light_orange</item>
+         <item name="android:statusBarColor">@color/light_purple</item>
     </style>
 
     <style name="Theme.PdfViewerFirebase" parent="Base.Theme.PdfViewerFirebase" />

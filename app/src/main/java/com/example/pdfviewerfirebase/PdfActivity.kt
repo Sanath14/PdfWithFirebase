@@ -2,19 +2,14 @@ package com.example.pdfviewerfirebase
 
 import android.app.DownloadManager
 import android.content.Context
-import android.media.SoundPool
-import android.media.SoundPool.OnLoadCompleteListener
 import android.net.Uri
 import android.os.Bundle
 import android.os.Environment
-import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.net.toUri
 import androidx.lifecycle.lifecycleScope
 import com.example.pdfviewerfirebase.databinding.ActivityPdfBinding
-import com.github.barteksc.pdfviewer.listener.OnRenderListener
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

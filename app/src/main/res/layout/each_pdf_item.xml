@@ -19,7 +19,7 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:src="@drawable/baseline_insert_drive_file_24"
-            app:tint="@color/orange"
+            app:tint="@color/red"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
